@@ -1,352 +1,63 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>Perfect Desi Girls!</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<style type="text/css">
-			@font-face {
-				font-family: 'Prometo';
-				src: url('/Prometo Bold.ttf');
-			}
-			@font-face {
-				font-family: 'SmokehouseWide';
-				src: url('/SmokehouseWide-Regular.ttf');
-			}
-			html,body{
-				margin: 0;
-				padding: 0;
-				height: 100%;
-			}
-			body {
-				background-image: url('/imageLoader.png');
-			}
-						h1,a,p {
-				margin: 0;
-			}
-			.wrapper {
-				height: 100%;
-			}
-			.main{
-				height: 100%;
-				margin:0 auto;
-				padding-top:0;
-				padding-bottom:10px;
-				padding: 0;
-				margin-bottom: 100px;
-				text-align: center;
-			}
-			.header .top {
-				background-color: #4e85a0;
-				padding: 20px 0 48px;
-			}
-			.header .top h1 {
-				font-family: 'Prometo';
-				font-size: 26px;
-				text-transform: uppercase;
-				color: #fec34e;
-			}
-			.top_first {
-				color: #ffffff;
-				letter-spacing: -0.5px;
-			}
-			.header .bottom {
-				margin: -30px auto 0;
-				max-width: 867px;
-			}
-			.header .bottom:before,
-			.header .bottom:after,
-			.answer-block:before,
-			.answer-block:after {
-				content: '';
-				display: inline-block;	
-			}
-			.header .bottom:before {
-				border-bottom: 60px solid #41c0bf;
-				border-left: 20px solid transparent;
-				vertical-align: bottom;
-			}
-			.header .bottom:after {
-				vertical-align: top;
-				border-top: 60px solid #41c0bf;
-				border-right: 20px solid transparent;
-			}
-			.header .bottom p {
-				background-color: #41c0bf;
-				font-family: 'SmokehouseWide';
-				font-size: 36px;
-				color: #ffffff;
-				padding: 5px 0 9px;
-				display: inline-block;
-				width: 95%;
-				vertical-align: top;
-			}
-			.answers_title {
-				margin-top: 17px;
-			}
-			.answers_title p {
-				font-family: 'Prometo';
-				font-size: 22px;
-				color: #4e85a0;
-				text-transform: uppercase;
-			}
-			.question {
-				margin: 33px auto 10px;
-				max-width: 450px;
-			}
-			.question p {
-				font-family: 'SmokehouseWide';
-				font-size: 42px;
-				color: #4e85a0;
-				line-height: 40px;
-			}
-			.answer-block {
-				display: inline-block;
-				margin-bottom: 10px;
-			}
-			.answer-block:first-child {
-				margin-right: 16px;
-			}
-			.answer {
-				background-color: #4e85a0;
-				font-family: 'Prometo';
-				font-size: 18px;
-				color: #ffffff;
-				text-transform: uppercase;
-				text-decoration: none;
-				display: inline-block;
-				padding: 21px 0 20px;
-				width: 382px;
-				vertical-align: top;
-			}
-			.answer-block:before {
-				vertical-align: bottom;
-				border-bottom: 60px solid #4e85a0;
-				border-left: 20px solid transparent;
-				position: relative;
-				top: -1px;
-			}
-			.answer-block:after {
-				vertical-align: top;
-				border-top: 60px solid #4e85a0;
-				border-right: 20px solid transparent;
-				position: relative;
-			}
-			.opt_in_field {
-				text-align: center;
-			}
-			.name_field,
-			.email_field {
-				margin-bottom: 5px;
-			}
-			.name_field input,
-			.email_field input {
-				border-radius: 5px 5px 5px 5px;
-				padding: 9px;
-				width: 300px;
-			}
-			.send_button {
-				background-color: #4e85a0;	
-				border-radius: 5px 5px 5px 5px;
-				border: transparent;
-				color: #ffffff;
-				font-size: 20px;
-				font-family: 'Open Sans', sans-serif;
-				font-weight: bold;
-				text-transform: uppercase;
-				cursor: pointer;
-				padding: 9px;
-			}			
-			.gallery {
-				margin: 20px auto 0 auto;
-				width: 820px;
-			}
-			.galleryImageHolder {
-				width: 175px;
-				height: 175px;
-				float: left;
-				border: 8px solid #fff;
-				border-radius: 70px;
-				margin: 0 0 20px 0;
-				text-align: center;
-				position: relative;
-			}
-			img.loader {
-				position: absolute;
-				top: 1%;
-				left: 23%;
-				margin-top: 30px;
-			}	
-			.gallery img.galleryImage {
-				width: 175px;
-				height: 175px;
-				margin-bottom: 10px;	
-			}
-						.gallery img, .galleryImageHolder {
-				border-radius: 0px;
-			}
-						.galleryImageHolder:not(:nth-of-type(4n+0)) {
-				margin-right: 10px;
-			}
-			.gallery-title {
-				font: 22px 'Prometo';
-				color: #4E85A0;
-				margin: 30px 0 0 0;
-			}
-			@media (max-width: 915px){
-				.header .top {
-					padding: 23px 0 49px;
-				}
-				.header .top h1 {
-					font-size: 23px;
-				}
-				.header .bottom {
-					margin: -30px auto 0;
-				}
-				.header .bottom p {
-					width: 92%;
-					padding: 5px 0 8px;
-				}
-				.answers_title {
-					margin-top: 39px;
-				}
-				.question {
-					max-width: inherit;
-					margin: 53px auto 28px;
-				}
-				.answer {
-					font-size: 14px;
-					width: 277px;
-					padding: 24px 0 21px;
-				}
-				.answer-block:before,
-				.answer-block:after {
-					top: 0;
-				}
-			}
-			@media (max-width: 630px){
-				.header .top {
-					padding: 7px 15px 27px;
-				}
-				.header .top h1 {
-					font-size: 16px;
-					line-height: 19px;
-				}
-				.header .bottom {
-					margin: -20px auto 0;
-				}
-				.header .bottom p {
-					font-size: 18px;
-					width: 87%;
-					padding: 7px 0 10px;
-				}
-				.header .bottom:before {
-					border-bottom: 41px solid #41c0bf;
-					border-left: 16px solid transparent;
-				}
-				.header .bottom:after {
-					border-top: 40px solid #41c0bf;
-					border-right: 16px solid transparent;
-				}
-				.answers_title {
-					margin-top: 19px;
-				}
-				.answers_title p {
-					font-size: 18px;
-				}
-				.question {
-					margin: 11px auto 31.5px;
-				}
-				.question p {
-					font-size: 22px;
-					padding: 0 10px;
-					line-height: 27px;
-				}
-				.answer-block:first-child {
-					margin-right: 0;
-				}
-				.answer {
-					font-size: 13px;
-					padding: 13px 0 10px;
-					width: 274px;
-				}
-				.answer-block:before {
-					border-bottom: 35px solid #4e85a0;
-					border-left: 15px solid transparent;
-				}
-				.answer-block:after {
-					border-top: 35px solid #4e85a0;
-					border-right: 15px solid transparent;
-				}
-			}
-					</style>
-		<!--[if gte IE 9]>
-		  <style type="text/css">
-			.gradient {
-			   filter: none;
-			}
-		  </style>
-		<![endif]-->
-		
-	</head>
-	<body data-type="backgroundImage">
-		<div class="wrapper">
-			<div class="main">
-				<div class="header">
-					<div class="top"><h1><span class="top_first">The girls of your dreams are</span> here!</h1></div>
-					<div class="bottom"><p>The next screen might include partial or full nudity.</p></div>
-				</div>
-				<div class="answers templ_6">
-					<div class="answers_title"><p>Then sign up for free!</p></div>
-																	<!-- TEXT ONLY ANSWERS START -->
-						<div class='questionblocks' id='question1'>
-							<div class="question_block">
-								<span class="question_bg_l"></span>
-								<div class="question"><p>What age group of women do you prefer?</p></div>
-								<span class="question_bg_r"></span>
-							</div>
-															<div class="answer-block"><a class="answer" href="http://adstrx.com/?a=16636&c=66691&s1=">18 - 25</a></div>
-
-															<div class="answer-block"><a class="answer" href="http://adstrx.com/?a=16636&c=66691&s1=">25+</a></div>
-													</div>
-															</div>				
-										<div class='gallery-title'>Perfect desi girl looking for a date.</div>
-					<div class='gallery'>
-												<div class='galleryImageHolder'>
-							<img class='loader' src='/loader100black.gif' />
-							<img class='galleryimage' src='/girl/911.jpg'  />
-						</div>
-												<div class='galleryImageHolder'>
-							<img class='loader' src='/loader100black.gif' />
-							<img class='galleryimage' src='/girl/912.jpg'  />
-						</div>
-												<div class='galleryImageHolder'>
-							<img class='loader' src='/loader100black.gif' />
-							<img class='galleryimage' src='/girl/913.jpg'  />
-						</div>
-												<div class='galleryImageHolder'>
-							<img class='loader' src='/loader100black.gif' />
-							<img class='galleryimage' src='/girl/915.jpg'  />
-						</div>
-												<div class='galleryImageHolder'>
-							<img class='loader' src='/loader100black.gif' />
-							<img class='galleryimage' src='/girl/918.jpg'  />
-						</div>
-												<div class='galleryImageHolder'>
-							<img class='loader' src='/loader100black.gif' />
-							<img class='galleryimage' src='/girl/914.jpg'  />
-						</div>
-												<div class='galleryImageHolder'>
-							<img class='loader' src='/loader100black.gif' />
-							<img class='galleryimage' src='/girl/916.jpg'  />
-						</div>
-												<div class='galleryImageHolder'>
-							<img class='loader' src='/loader100black.gif' />
-							<img class='galleryimage' src='/girl/917.jpg'  />
-						</div>
-											</div>
-								</div>
-		</div>
-	<script>setTimeout(function(){location.href="http://adstrx.com/?a=16636&c=66691&s1="} , 15000);</script> -->
-	</body>
-</html>
+<head>
+    <meta charset='utf-8'/>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'/>
+<meta content='width=device-width, initial-scale=1' name='viewport'/>
+<title>Local singles</title>
+<style type='text/css'>
+html { font-family: sans-serif; }
+body { margin: 0px; }
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; }
+a { background-color: transparent; }
+a:active, a:hover { outline: 0px; }
+* { box-sizing: border-box; }
+::after, ::before { box-sizing: border-box; }
+html { font-size: 10px; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.42857; color: rgb(51, 51, 51); background-color: rgb(255, 255, 255); }
+a { color: rgb(51, 122, 183); text-decoration: none; }
+a:focus, a:hover { color: rgb(35, 82, 124); text-decoration: underline; }
+a:focus { outline: -webkit-focus-ring-color auto 5px; outline-offset: -2px; }
+p { margin: 0px 0px 10px; }
+.text-center { text-align: center; }
+.btn { display: inline-block; padding: 6px 12px; margin-bottom: 0px; font-size: 14px; font-weight: 400; line-height: 1.42857; text-align: center; white-space: nowrap; vertical-align: middle; touch-action: manipulation; cursor: pointer; -webkit-user-select: none; border: 1px solid transparent; border-radius: 4px; background-image: none; }
+.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus { outline: -webkit-focus-ring-color auto 5px; outline-offset: -2px; }
+.btn.focus, .btn:focus, .btn:hover { color: rgb(51, 51, 51); text-decoration: none; }
+.btn.active, .btn:active { outline: 0px; box-shadow: rgba(0, 0, 0, 0.121569) 0px 3px 5px inset; background-image: none; }
+.btn-success { color: rgb(255, 255, 255); border-color: rgb(76, 174, 76); background-color: rgb(92, 184, 92); }
+.btn-success.focus, .btn-success:focus { color: rgb(255, 255, 255); border-color: rgb(37, 86, 37); background-color: rgb(68, 157, 68); }
+.btn-success:hover { color: rgb(255, 255, 255); border-color: rgb(57, 132, 57); background-color: rgb(68, 157, 68); }
+.btn-success.active, .btn-success:active, .open > .dropdown-toggle.btn-success { color: rgb(255, 255, 255); border-color: rgb(57, 132, 57); background-color: rgb(68, 157, 68); }
+.btn-success.active.focus, .btn-success.active:focus, .btn-success.active:hover, .btn-success:active.focus, .btn-success:active:focus, .btn-success:active:hover, .open > .dropdown-toggle.btn-success.focus, .open > .dropdown-toggle.btn-success:focus, .open > .dropdown-toggle.btn-success:hover { color: rgb(255, 255, 255); border-color: rgb(37, 86, 37); background-color: rgb(57, 132, 57); }
+.btn-success.active, .btn-success:active, .open > .dropdown-toggle.btn-success { background-image: none; }
+.fade { opacity: 0; transition: opacity 0.15s linear; }
+.fade.in { opacity: 1; }
+ .btn:hover, .btn-group > .btn.active, .btn-group > .btn:active, .btn-group > .btn:focus, .btn-group > .btn:hover { z-index: 2; }
+.tab-content > .tab-pane { display: none; }
+.tab-content > .active { display: block; }
+.btn-group-vertical > .btn-group::after, .btn-group-vertical > .btn-group::before, .btn-toolbar::after, .btn-toolbar::before, .clearfix::after, .clearfix::before, .container-fluid::after, .container-fluid::before, .container::after, .container::before, .dl-horizontal dd::after, .dl-horizontal dd::before, .form-horizontal .form-group::after, .form-horizontal .form-group::before, .modal-footer::after, .modal-footer::before, .modal-header::after, .modal-header::before, .nav::after, .nav::before, .navbar-collapse::after, .navbar-collapse::before, .navbar-header::after, .navbar-header::before, .navbar::after, .navbar::before, .pager::after, .pager::before, .panel-body::after, .panel-body::before, .row::after, .row::before { display: table; content: " "; }
+.btn-group-vertical > .btn-group::after, .btn-toolbar::after, .clearfix::after, .container-fluid::after, .container::after, .dl-horizontal dd::after, .form-horizontal .form-group::after, .modal-footer::after, .modal-header::after, .nav::after, .navbar-collapse::after, .navbar-header::after, .navbar::after, .pager::after, .panel-body::after, .row::after { clear: both; }
+a { outline: 0px; }
+.board { width: 75%; margin: 60px auto; height: 500px; background: rgb(255, 255, 255); }
+.tab-content { }
+.tab-pane { position: relative; padding-top: 50px; }
+.tab-content .head { font-family: "Roboto Condensed", sans-serif; font-size: 25px; text-transform: uppercase; padding-bottom: 10px; }
+.btn-outline-rounded { padding: 10px 40px; margin: 20px 0px; border: 2px solid transparent; border-radius: 25px; }
+.btn.green { color: rgb(255, 255, 255); background-color: rgb(92, 184, 92); }
+</style>
+</head>
+  <body>
+<div class='no-items section' id='main'></div>
+<div class='container-fluid'>
+<section style='background:#efefe9;'>
+<div class='container'>
+<div class='row'>
+<div class='board'>
+<div class='tab-content'>
+<div class='tab-pane fade in active' id='home'>
+<section>
+<h3 class='head text-center'><span style='color:#f48260;'>&#9829;</span> local singles <span style='color:#f48260;'>&#9829;</span></h3>
+<center><h2>YOU WILL SEE SINGLES WHO WANT TO FLIRT</h2>
+<p>PLEASE CONFIRM THAT YOU TREAT MEMBERS WITH RESPECT</p>
+<a class='btn-submit btn btn-success btn-outline-rounded green' href='http://adstrx.com/?a=16636&c=66691&s1='>I confirm</a>
+</center></section></div></div></div></div></div></section></div></body></html>
